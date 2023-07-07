@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+:root {
+    --main-color: 0; 
+}
+
+
+body {
+    background: hsl(var(--main-color), 50%,16%);
+}
+
+.nav-bar{
+    color: azure;
+    margin: auto;
+    padding: 20px;
+    width: 600px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    background: hsl(var(--main-color), 70%,10%);
+    box-shadow: 2px 2px rgba(255, 255, 255, 0.497);
+    border-radius: 10px;
+    
+}
+.nav-bar i{
+    font-size: 2rem;
+    color: white;
+
+}
+
+.color-switcher{
+    position: fixed;
+    top:25px;
+    right: -250px;
+    width: 200px;
+    padding: 10px;
+    backdrop-filter: blur(100px);
+    border-radius: 3px;
+    z-index: 1;
+    border: 2px solid seashell;
+
+    width: 250px;
+}
+
+.color-switcher.active{
+    right: 0px;
+    transition: 1s;
+}
+
+.color-switcher h3{
+    color: var(--main-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom:1px solid #3333 ;
+    padding:5px 0;
+    text-align: center;
+    color: floralwhite;
+}
+
+.color-switcher .switcher-btn{
+    position: absolute;
+    top:0;
+    left: -79px;
+    color: var(--main-color);
+    background-color:var(--main-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 35px ;
+    border-radius: 5px;
+    border: 2px solid whitesmoke;
+
+}
+
+.color-switcher .switcher-btn i{
+    color: white;
+}
+
+#setting{
+    /* border: 2px solid rgb(0, 0, 0); */
+    animation: mymove 3s infinite;
+}
+
+@keyframes mymove {
+    100% {transform: rotate(360deg);}
+}
+
+.color-switcher .theme-buttons-container{
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.color-switcher .theme-buttons-container .theme-buttons{
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.tool-container{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 950px;
+    margin: 50px auto 0px auto;
+}
+.tool-container h1{
+    color: rgb(255, 255, 255);
+    display: block;
+    text-align: center;
+    margin: 20px 10px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 5px 5px hsl(var(--main-color), 50%,5%);
+}
+.tool-container-feild-group{
+    display: flex;
+    width: 98%;
+}
+.tool-container-feild{
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin: 5px;
+    background: hsl(var(--main-color),80%,80%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.tool-input-group{
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    width: 100%;    
+    margin: 5px auto;
+    position: relative;
+    padding: 10px 5px;
+    border-bottom: 1px solid rgb(222, 228, 228);
+}
+.tool-input-group:last-child{
+    border: none;
+}
+.tool-input-label{
+    display: block;
+    font-size: 20px;
+    line-height: 40px;
+    min-width: 60px; 
+}
+.tool-input-feild{
+    display: block;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    width: 150px;
+    height: 35px;
+    border: None;
+    border-radius: 5px;
+    padding: 5px;
+}
+.tool-btn{
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: aliceblue;    
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.tool-btn:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.tool-btn-reset{
+    width: 150px;
+    margin-left: 0px;
+    background: rgb(251, 252, 182);
+    color: rgb(58, 25, 25);
+}
+.tool-select-group{
+    float: right;
+    border: none;
+    height: 35px;
+    min-width: 100px;
+    text-align: center;
+    border-right:5px ;
+    border-radius: 5px;
+    font-weight: 700;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+}
+.tool-btn-calculate{
+    width: 150px;
+    margin-right: 0px;
+    background: rgb(0, 0, 0);
+}
+.tool-output-box{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tool-output-box ul{
+    margin: 5px;
+    margin-left: 25px;
+}
+
+
+#OutputInfo{
+    display: flex;
+}
+.tool-output-box h2{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+.tool-output-box p{
+    text-align: left;
+    margin-top: 10px;
+    font-size: 28px;
+    align-self: flex-start;
+}
+.tool-output-box table tr{
+    height: 30px;
+}
+.tool-output-table{
+    width: 100%;
+    font-size: 25px;
+}
+.tool-author-intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #5A5A5A;
+}
+.tool-author-intro p{
+    margin: 5px;
+}
+.tool-author-intro a{
+    text-decoration: none;
+    color: rgb(154, 197, 163);
+    transition: .5s;
+}
+.tool-author-intro a:hover{
+    color: rgb(84, 134, 95);
+}
+.tool-error-border{
+    border: 2px solid red;
+}
+.tool-error-message{
+    display: block;
+    color: red;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 800;
+    margin: 5px 5px 0 5px;
+    position: absolute;
+    bottom: 1px;
+    right: 0px;
+}
+.tool-readonly-background{
+    background: #E5E5E5;
+}
+
+.table{
+    border: 3px solid;
+    border-radius: 10px;
+    box-shadow: 3px 5px rgba(39, 39, 39, 0.533);
+}
+
+table{
+    border-collapse: collapse;
+}
+table th{
+    border: 1px solid;
+    
+}
+
+table td{
+    border: 1px solid;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .tool-container{
+        width: 98%;
+        margin: 10px;
+        box-sizing: border-box;
+        padding: 5px;
+        align-items: center;
+    }
+    #OutputInfo{
+        flex-direction: column;
+    }
+    .tool-container h1{
+        margin: 10px 5px;
+        font-size: 25px;
+    }
+    .tool-container-feild-group{
+        width: 98%;
+        flex-direction: column;       
+    }
+    .tool-container-feild{
+        width: 98%;
+    }
+
+    .color-switcher .switcher-btn{
+        top:5px;
+        left: -64px;;
+        font-size: 20px;
+    
+    }
+    .color-switcher{
+        top: 5px;
+        width: 250px;
+    }
+    .color-switcher .theme-buttons-container .theme-buttons {
+        height: 30px;
+        width: 30px;
+    }
+    .nav-bar {
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+}
